@@ -19,6 +19,9 @@ Creature.prototype.render = function() {
   $creatureClone.removeClass('clone');
   $creatureClone.attr('class', this.title);
   $creatureClone.appendTo('main');
+
+  $('select').append($('<option></option>)').text(this.keyword).val(this.keyword));
+  
 }
 
 Creature.readJson = () => {
@@ -35,4 +38,9 @@ Creature.loadCreatures = () => {
   Creature.allCreatures.forEach(creature => creature.render());
 };
 
-$(() => Creature.readJson());
+$(() => {
+  Creature.readJson();
+});
+
+
+

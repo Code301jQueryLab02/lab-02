@@ -1,1 +1,27 @@
 # lab-02
+
+### Time estimates
+
+Number and name of feature: Feature 1 - Display Images
+Estimated time necessary: 60min
+Start time: 9:30pm
+Finish time: 8:30pm
+Actual time to completion: 60min
+
+Number and name of feature: Feature 2 - Filter Images
+Estimated time necessary: 90min
+Start time: 
+Finish time: 
+Actual time to completion: 
+
+Number and name of feature: Feature 3 - Style Images
+Estimated time necessary: 90min
+Start time: 
+Finish time: 
+Actual time to completion: 
+
+Number and name of feature: Stretch Goal - Sort the Images
+Estimated time necessary: 
+Start time: 
+Finish time: 
+Actual time to completion: 
