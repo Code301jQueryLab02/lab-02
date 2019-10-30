@@ -1,36 +1,6 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-section {
-  border: 1px solid red;
-  width: 15%;
-}
 
-img {
-  width: 100%;
-}
-
-h1 {
-  font-family: 'Cinzel', serif;
-  text-align: center;
-  font-size: 50px;
-  line-height: 40px;
-}
-
-h1 span {
-  font-family: 'Cinzel', serif;
-  font-size: 30px;
-}
-
-h2 {
-  font-family: 'Cinzel', serif;
-  font-weight: 400;
-}
-
-main {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0px auto;
-}
-
+@import url("reset.css");
+@import url("base.css");
+@import url("layouts.css");
+@import url("modules.css");
