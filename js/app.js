@@ -9,6 +9,7 @@ function Creature(creature) {
 }
 
 Creature.allCreatures = [];
+Creature.keywords = [];
 
 Creature.prototype.render = function() {
   let creatureClone = $('#photo-template').clone();
@@ -19,9 +20,7 @@ Creature.prototype.render = function() {
   $creatureClone.removeClass('clone');
   $creatureClone.attr('class', this.title);
   $creatureClone.appendTo('main');
-
-  $('select').append($('<option></option>)').text(this.keyword).val(this.keyword));
-  
+  Creature.keywords.push(this.keyword);
 }
 
 Creature.readJson = () => {
@@ -36,11 +35,17 @@ Creature.readJson = () => {
 
 Creature.loadCreatures = () => {
   Creature.allCreatures.forEach(creature => creature.render());
+  Creature.popList();
 };
+
+Creature.popList = () => {
+  const set = new Set(Creature.keywords);
+  console.log(set);
+  set.forEach( element => {
+    $('select').append($('<option></option>)').text(element).val(element));
+  });
+}
 
 $(() => {
   Creature.readJson();
 });
-
-
-
