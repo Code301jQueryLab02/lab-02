@@ -12,7 +12,7 @@ Creature.allCreatures = [];
 Creature.keywords = [];
 
 Creature.prototype.render = function() {
-  let creatureClone = $('#photo-template').clone();
+  let creatureClone = $('#photo-template, #photo-template-p2').clone();
   let $creatureClone = $(creatureClone[0].content);
   $creatureClone.find('h2').text(this.title);
   $creatureClone.find('img').attr('src', this.image_url);
