@@ -17,15 +17,14 @@ Creature.prototype.render = function() {
   $creatureClone.find('h2').text(this.title);
   $creatureClone.find('img').attr('src', this.image_url);
   $creatureClone.find('p').text(this.description);
+  $creatureClone.find('section').attr('class', this.keyword);
   $creatureClone.removeClass('clone');
   $creatureClone.attr('class', this.title);
   $creatureClone.appendTo('main');
 
+ 
   Creature.keywords.push(this.keyword);
 
-  $('select').on('change', function() {
-    $('section').hide();
-  }); 
 }
 
 Creature.readJson = () => {
@@ -52,6 +51,12 @@ Creature.popList = () => {
   });
 }
 
+
+$('select').on('change', function() {
+  let $targetImage = $(this).val();
+  $('section').hide();
+  $(`section.${$targetImage}`).show();
+}); 
 
 $(() => {
   Creature.readJson();

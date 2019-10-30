@@ -1,5 +1,5 @@
 # lab-02
-
+credit to Trevor Thompson for show function
 ### Time estimates
 
 Number and name of feature: Feature 1 - Display Images
@@ -10,9 +10,9 @@ Actual time to completion: 60min
 
 Number and name of feature: Feature 2 - Filter Images
 Estimated time necessary: 90min
-Start time: 
-Finish time: 
-Actual time to completion: 
+Start time: 8:00am
+Finish time: 12:00pm
+Actual time to completion: 240min
 
 Number and name of feature: Feature 3 - Style Images
 Estimated time necessary: 90min
