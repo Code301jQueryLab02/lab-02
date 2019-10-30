@@ -16,9 +16,9 @@ Actual time to completion: 240min
 
 Number and name of feature: Feature 3 - Style Images
 Estimated time necessary: 90min
-Start time: 
-Finish time: 
-Actual time to completion: 
+Start time: 12:30pm
+Finish time: 1:00pm
+Actual time to completion: 30mins
 
 Number and name of feature: Stretch Goal - Sort the Images
 Estimated time necessary: 
