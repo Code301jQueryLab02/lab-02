@@ -17,10 +17,14 @@ Creature.prototype.render = function() {
   $creatureClone.find('h2').text(this.title);
   $creatureClone.find('img').attr('src', this.image_url);
   $creatureClone.find('p').text(this.description);
+  $creatureClone.find('section').attr('class', this.keyword);
   $creatureClone.removeClass('clone');
   $creatureClone.attr('class', this.title);
   $creatureClone.appendTo('main');
+
+ 
   Creature.keywords.push(this.keyword);
+
 }
 
 Creature.readJson = () => {
@@ -36,6 +40,7 @@ Creature.readJson = () => {
 Creature.loadCreatures = () => {
   Creature.allCreatures.forEach(creature => creature.render());
   Creature.popList();
+  $('select').on('click', )
 };
 
 Creature.popList = () => {
@@ -45,6 +50,13 @@ Creature.popList = () => {
     $('select').append($('<option></option>)').text(element).val(element));
   });
 }
+
+
+$('select').on('change', function() {
+  let $targetImage = $(this).val();
+  $('section').hide();
+  $(`section.${$targetImage}`).show();
+}); 
 
 $(() => {
   Creature.readJson();
