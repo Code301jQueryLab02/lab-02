@@ -21,10 +21,7 @@ Creature.prototype.render = function() {
   $creatureClone.removeClass('clone');
   $creatureClone.attr('class', this.title);
   $creatureClone.appendTo('main');
-
- 
   Creature.keywords.push(this.keyword);
-
 }
 
 Creature.readJson = () => {
@@ -40,7 +37,6 @@ Creature.readJson = () => {
 Creature.loadCreatures = () => {
   Creature.allCreatures.forEach(creature => creature.render());
   Creature.popList();
-  $('select').on('click', )
 };
 
 Creature.popList = () => {
@@ -51,13 +47,10 @@ Creature.popList = () => {
   });
 }
 
-
 $('select').on('change', function() {
   let $targetImage = $(this).val();
   $('section').hide();
   $(`section.${$targetImage}`).show();
-}); 
-
-$(() => {
-  Creature.readJson();
 });
+
+$(() => Creature.readJson())
