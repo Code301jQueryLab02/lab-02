@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="./css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700&display=swap" rel="stylesheet">
 
-  <script id="neighborhood-template" type="text/x-handlebars-template">
+  <script id="photo-template" type="text/x-handlebars-template">
     <section>
       <h2>{{title}}</h2>
-      <img src="{{image_url}}" alt="{{description}}">
+      <img src={{image_url}} alt={{description}}>
       <p>{{description}}</p>
     </section>
   </script>
@@ -34,14 +34,14 @@
       <option value="default">Filter by Keyword</option>
     </select>
   </header>
-  <main>
-    <template id="photo-template">
+  <main id="creatures">
+    <!-- <template id="photo-template">
       <section>
         <h2></h2>
         <img src="" alt="">
         <p></p>
       </section>
-    </template>
+    </template> -->
 
   </main>
   <footer>
