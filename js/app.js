@@ -16,18 +16,6 @@ Creature.allCreatures = [];
 Creature.keywords = [];
 
 Creature.prototype.render = function() {
-  // let creatureClone = $('#photo-template, #photo-template-p2').clone();
-  // let $creatureClone = $(creatureClone[0].content);
-  // $creatureClone.find('h2').text(this.title);
-  // $creatureClone.find('img').attr('src', this.image_url);
-  // $creatureClone.find('p').text(this.description);
-  // $creatureClone.find('section').attr('class', this.keyword);
-  // $creatureClone.removeClass('clone');
-  // $creatureClone.attr('class', this.title);
-  // $creatureClone.appendTo('main');
-  // Creature.keywords.push(this.keyword);
-
-
 }
 
 Creature.prototype.toHtml = function() {
@@ -36,8 +24,12 @@ Creature.prototype.toHtml = function() {
   return templateRender(this);
 }
 
+let pageNumber = 1;
+
 Creature.readJson = () => {
-  $.get('../data/page-1.json')
+  // $('main').empty();
+  $.get(`../data/page-${pageNumber}.json`)
+    // issue right now is that it's reinstatiating everything
     .then(data => {
       data.forEach(item => {
         Creature.allCreatures.push(new Creature(item));
@@ -67,6 +59,18 @@ $('select').on('change', function() {
   let $targetImage = $(this).val();
   $('section').hide();
   $(`section.${$targetImage}`).show();
+});
+
+// nav handler
+$('nav a').on('click', function() {
+  let $whereToGo = $(this).data('tab');  
+  if ($whereToGo === 'page1') {
+    pageNumber = 1;
+    Creature.readJson();
+  } else if ($whereToGo === 'page2') {
+    pageNumber = 2;
+    Creature.readJson();
+  }
 });
 
 $(() => Creature.readJson())
