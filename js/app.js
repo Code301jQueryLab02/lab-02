@@ -51,7 +51,7 @@ Creature.popList = () => {
   Creature.allCreatures.forEach(item => keywordsTemp.push(item.keyword));
   const set = new Set(keywordsTemp);
   set.forEach( element => {
-    $('select').append($('<option></option>)').text(element).val(element));
+    $('#filter').append($('<option></option>)').text(element).val(element));
   });
 }
 

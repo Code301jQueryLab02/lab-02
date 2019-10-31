@@ -10,7 +10,7 @@
 
 
   <script id="photo-template" type="text/x-handlebars-template">
-    <section class="{{keyword}}">
+    <section class="{{keyword}}, {{title}}, {{horns}}" >
       <h2>{{title}}</h2>
       <img src="{{image_url}}" alt="{{title}}">
       <p>{{description}}</p>
@@ -31,9 +31,16 @@
       </ul>
     </nav>
 
-    <select>
+    <select id="filter">
       <option value="default">Filter by Keyword</option>
     </select>
+
+    <select id="sort">
+      <option value="default">Sort by Keyword</option>
+      <option value="title">creature title</option>
+      <option value="horns">number of horns</option>
+    </select>
+
   </header>
   <main id="creatures">
     <!-- <template id="photo-template">
