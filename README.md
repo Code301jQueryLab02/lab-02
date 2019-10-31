@@ -1,6 +1,7 @@
 # lab-02
 credit to Trevor Thompson for show function
 ### Time estimates
+#### Lab-02
 
 Number and name of feature: Feature 1 - Display Images
 Estimated time necessary: 60min
@@ -24,4 +25,11 @@ Number and name of feature: Stretch Goal - Sort the Images
 Estimated time necessary: 
 Start time: 
 Finish time: 
-Actual time to completion: 
+Actual time to completion:
+
+#### Lab-03
+Number and name of feature: Feature 1 - Pagination
+Estimated time necessary: 90min
+Start time: 8:00am
+Finish time: 
+Actual time to completion:
