@@ -27,7 +27,7 @@ Creature.prototype.toHtml = function() {
 let pageNumber = 1;
 
 Creature.readJson = () => {
-  // $('main').empty();
+  $('main').empty();
   $.get(`../data/page-${pageNumber}.json`)
     // issue right now is that it's reinstatiating everything
     .then(data => {
@@ -63,13 +63,20 @@ $('select').on('change', function() {
 
 // nav handler
 $('nav a').on('click', function() {
+  console.log(Creature.allCreatures);
+  
+  
   let $whereToGo = $(this).data('tab');  
   if ($whereToGo === 'page1') {
     pageNumber = 1;
+    Creature.allCreatures.length = 0;
     Creature.readJson();
+    console.log(Creature.allCreatures);
   } else if ($whereToGo === 'page2') {
     pageNumber = 2;
+    Creature.allCreatures.length = 0;
     Creature.readJson();
+    console.log(Creature.allCreatures);
   }
 });
 
