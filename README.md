@@ -31,11 +31,23 @@ Actual time to completion:
 Number and name of feature: Feature 1 - Pagination
 Estimated time necessary: 90min
 Start time: 8:00am
-Finish time: 
-Actual time to completion:
+Finish time: 3:50pm
+Actual time to completion: 2 hours 20mins
 
 Number and name of feature: Feature 2 - Templating
 Estimated time necessary: 60min
 Start time: 8:00am
 Finish time: 10:15am
 Actual time to completion: 60mins
+
+Number and name of feature: Feature 3 - Flex-box
+Estimated time necessary: 0min
+Start time: n/a
+Finish time: n/a
+Actual time to completion: 0min
+
+Number and name of feature: Feature 4 - Sort
+Estimated time necessary: 60mins
+Start time: 
+Finish time:
+Actual time to completion: 
