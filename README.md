@@ -33,3 +33,9 @@ Estimated time necessary: 90min
 Start time: 8:00am
 Finish time: 
 Actual time to completion:
+
+Number and name of feature: Feature 2 - Templating
+Estimated time necessary: 60min
+Start time: 8:00am
+Finish time: 
+Actual time to completion:
