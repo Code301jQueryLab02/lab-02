@@ -43,11 +43,13 @@ Creature.readJson = () => {
 };
 
 Creature.loadCreatures = () => {
+  console.log(Creature.allCreatures);
   Creature.allCreatures.forEach(creature => creature.render());
   Creature.popList();
 };
 
 Creature.popList = () => {
+  console.log(Creature.keywords);
   const set = new Set(Creature.keywords);
   console.log(set);
   set.forEach( element => {
