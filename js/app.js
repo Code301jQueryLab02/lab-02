@@ -47,9 +47,9 @@ Creature.loadCreatures = () => {
 };
 
 Creature.popList = () => {
-  const keywordsTemp = [];
-  Creature.allCreatures.forEach(item => keywordsTemp.push(item.keyword));
-  const set = new Set(keywordsTemp);
+  $('select').empty();
+  Creature.allCreatures.forEach(item => Creature.keywords.push(item.keyword));
+  const set = new Set(Creature.keywords);
   set.forEach( element => {
     $('select').append($('<option></option>)').text(element).val(element));
   });
@@ -63,20 +63,15 @@ $('select').on('change', function() {
 
 // nav handler
 $('nav a').on('click', function() {
-  console.log(Creature.allCreatures);
-  
-  
-  let $whereToGo = $(this).data('tab');  
+  let $whereToGo = $(this).data('tab');
   if ($whereToGo === 'page1') {
     pageNumber = 1;
     Creature.allCreatures.length = 0;
     Creature.readJson();
-    console.log(Creature.allCreatures);
   } else if ($whereToGo === 'page2') {
     pageNumber = 2;
     Creature.allCreatures.length = 0;
     Creature.readJson();
-    console.log(Creature.allCreatures);
   }
 });
 
