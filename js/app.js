@@ -67,6 +67,9 @@ $('select').on('change', function() {
 $('nav a').on('click', function() {
   let $whereToGo = $(this).data('tab');
   // the following outputs "where to go page1" or "where to go page2" to the console depending on which link is clicked
+  
+  // $('#' + $whereToGo).Creature.readJson();
+  
   if ($whereToGo === 'page1') {
     Creature.readJson();
   } else if ($whereToGo === 'page2') {
