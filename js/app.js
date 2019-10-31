@@ -47,7 +47,7 @@ Creature.loadCreatures = () => {
 };
 
 Creature.popList = () => {
-  $('select').empty();
+  $('#filter').append($('<option></option>)').text('Filter by Keyword').val('default'));
   Creature.allCreatures.forEach(item => Creature.keywords.push(item.keyword));
   const set = new Set(Creature.keywords);
   set.forEach( element => {
@@ -67,10 +67,12 @@ $('nav a').on('click', function() {
   if ($whereToGo === 'page1') {
     pageNumber = 1;
     Creature.allCreatures.length = 0;
+    $('#filter').empty();
     Creature.readJson();
   } else if ($whereToGo === 'page2') {
     pageNumber = 2;
     Creature.allCreatures.length = 0;
+    $('#filter').empty();
     Creature.readJson();
   }
 });
