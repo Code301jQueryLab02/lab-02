@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700&display=swap" rel="stylesheet">
 
   <script id="photo-template" type="text/x-handlebars-template">
-    <section>
+    <section class="{{keyword}}">
       <h2>{{title}}</h2>
-      <img src={{image_url}} alt={{description}}>
+      <img src="{{image_url}}" alt="{{title}}">
       <p>{{description}}</p>
     </section>
   </script>

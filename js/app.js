@@ -27,6 +27,10 @@ Creature.prototype.render = function() {
   // $creatureClone.appendTo('main');
   // Creature.keywords.push(this.keyword);
 
+
+}
+
+Creature.prototype.toHtml = function() {
   let template = $('#photo-template').html();
   let templateRender = Handlebars.compile(template);
   return templateRender(this);
@@ -43,23 +47,21 @@ Creature.readJson = () => {
 };
 
 Creature.loadCreatures = () => {
-  console.log(Creature.allCreatures);
-  Creature.allCreatures.forEach(creature => creature.render());
+  Creature.allCreatures.forEach(creature => {
+    // creature.render();
+    $('#creatures').append(creature.toHtml());
+  });
   Creature.popList();
 };
 
 Creature.popList = () => {
-  console.log(Creature.keywords);
-  const set = new Set(Creature.keywords);
-  console.log(set);
+  const keywordsTemp = [];
+  Creature.allCreatures.forEach(item => keywordsTemp.push(item.keyword));
+  const set = new Set(keywordsTemp);
   set.forEach( element => {
     $('select').append($('<option></option>)').text(element).val(element));
   });
 }
-
-Creature.allCreatures.forEach(ourNewCreatureObject => {
-  $('#creatures').append(ourNewCreatureObject.toHtml);
-})
 
 $('select').on('change', function() {
   let $targetImage = $(this).val();
