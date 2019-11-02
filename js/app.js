@@ -9,6 +9,10 @@ function Creature(creature) {
 Creature.allCreatures = [];
 Creature.keywords = [];
 
+const sortbyHorns = (arr) => {
+  return arr.sort((a, b) => a.horns - b.horns)
+};
+
 Creature.prototype.toHtml = function() {
   let template = $('#photo-template').html();
   let templateRender = Handlebars.compile(template);
@@ -44,10 +48,17 @@ Creature.popList = () => {
   });
 }
 
-$('select').on('change', function() {
+// Filters what creatures are shown based on what keyword is chosen from the dropdown list
+$('#filter').on('change', function() {
   let $targetImage = $(this).val();
   $('section').hide();
   $(`section.${$targetImage}`).show();
+});
+
+// Sorts creature array by horns when number of horns is chose from the dropdown list
+$('#sort').on('change', function() {
+  sortbyHorns(Creature.allCreatures);
+  console.log(Creature.allCreatures);
 });
 
 $('nav a').on('click', function() {
@@ -68,3 +79,4 @@ $('nav a').on('click', function() {
 });
 
 $(() => Creature.readJson())
+
