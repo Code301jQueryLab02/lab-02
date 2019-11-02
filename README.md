@@ -1,5 +1,11 @@
-# lab-02
-credit to Trevor Thompson for show function
+## Code 301 Gallery of Horns Lab
+
+*A single page application that dispalys a gallery of horned creatures with the option to switch between "pages" to see one set of 20 and a second set of 20. The creatures can then be filtered by keyword and sorted by number of horns or their title.*
+
+*Pair programming collaboration: Holly Davis and Travis Skyles*
+
+*credit to Trevor Thompson for show function*
+
 ### Time estimates
 #### Lab-02
 
