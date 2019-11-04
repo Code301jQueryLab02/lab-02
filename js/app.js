@@ -57,8 +57,14 @@ $('#filter').on('change', function() {
 
 // Sorts creature array by horns when number of horns is chose from the dropdown list
 $('#sort').on('change', function() {
-  sortbyHorns(Creature.allCreatures);
-  console.log(Creature.allCreatures);
+  let $targetImage = $(this).val();
+  if($targetImage === 'horns'){
+    sortbyHorns(Creature.allCreatures);
+    $('section').remove();
+    Creature.loadCreatures();
+  }
+
+
 });
 
 $('nav a').on('click', function() {
