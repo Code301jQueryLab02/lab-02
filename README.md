@@ -25,35 +25,29 @@ Number and name of feature: Feature 3 - Style Images
 Estimated time necessary: 90min
 Start time: 12:30pm
 Finish time: 1:00pm
-Actual time to completion: 30mins
-
-Number and name of feature: Stretch Goal - Sort the Images
-Estimated time necessary: 
-Start time: 
-Finish time: 
-Actual time to completion:
+Actual time to completion: 30min
 
 #### Lab-03
 Number and name of feature: Feature 1 - Pagination
 Estimated time necessary: 90min
 Start time: 8:00am
-Finish time: 3:50pm
-Actual time to completion: 2 hours 20mins
+Finish time: 10:20am
+Actual time to completion: 140min
 
 Number and name of feature: Feature 2 - Templating
 Estimated time necessary: 60min
 Start time: 8:00am
 Finish time: 10:15am
-Actual time to completion: 60mins
+Actual time to completion: 135min
 
-Number and name of feature: Feature 3 - Flex-box
-Estimated time necessary: 0min
-Start time: n/a
-Finish time: n/a
-Actual time to completion: 0min
+Number and name of feature: Feature 3 - Flexbox
+Estimated time necessary: 60min
+Start time: 9:00am
+Finish time: 10:00am
+Actual time to completion: 60min
 
 Number and name of feature: Feature 4 - Sort
-Estimated time necessary: 60mins
-Start time: 
-Finish time:
-Actual time to completion: 
+Estimated time necessary: 60min
+Start time: 8:00pm
+Finish time: 9:00pm
+Actual time to completion: 60min
