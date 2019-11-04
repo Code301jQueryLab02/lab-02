@@ -9,9 +9,22 @@ function Creature(creature) {
 Creature.allCreatures = [];
 Creature.keywords = [];
 
-const sortbyHorns = (arr) => {
-  return arr.sort((a, b) => a.horns - b.horns)
-};
+const sortByHorns = (arr) => {
+  return arr.sort((a, b) => a.horns - b.horns);
+}
+
+const sortByTitle = (arr) => {
+  return arr.sort((a, b) => {
+    if(a.title.toLowerCase() < b.title.toLowerCase()){
+      return -1;
+    }
+    if(a.title.toLowerCase() > b.title.toLowerCase()){
+      return 1;
+    }
+    return 0;
+  });
+
+}
 
 Creature.prototype.toHtml = function() {
   let template = $('#photo-template').html();
@@ -57,15 +70,16 @@ $('#filter').on('change', function() {
 
 // Sorts creature array by horns when number of horns is chose from the dropdown list
 $('#sort').on('change', function() {
-  let $targetImage = $(this).val();
-  if($targetImage === 'horns'){
-    sortbyHorns(Creature.allCreatures);
+  if($(this).val() === 'horns'){
+    sortByHorns(Creature.allCreatures);
+    $('section').remove();
+    Creature.loadCreatures();
+  } else if($(this).val() === 'title'){
+    sortByTitle(Creature.allCreatures);
     $('section').remove();
     Creature.loadCreatures();
   }
-
-
-});
+})
 
 $('nav a').on('click', function() {
   let $whereToGo = $(this).data('tab');
