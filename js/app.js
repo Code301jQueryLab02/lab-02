@@ -41,8 +41,9 @@ Creature.readJson = () => {
       data.forEach(item => {
         Creature.allCreatures.push(new Creature(item));
       });
+      sortByTitle(Creature.allCreatures)
     })
-    .then(Creature.loadCreatures)
+    .then(Creature.loadCreatures);
 };
 
 Creature.loadCreatures = () => {
